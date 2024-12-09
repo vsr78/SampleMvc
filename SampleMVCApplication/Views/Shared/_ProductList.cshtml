@@ -1,0 +1,16 @@
+﻿@model ProductViewModel
+
+<div class="col-lg-4">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">@Model.ProductName</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">@Model.ProductDescription</h6>
+            <vc:discount-offer price="@Model.Price"></vc:discount-offer>
+            <p class="card-text">@Model.Price</p>
+            <a href="#" class="card-link">Card link</a>
+        </div>
+    </div>
+    <my-custom message="This is my Tag Helper"></my-custom>
+    <my-custom>Vijender,Ravi,Abhiraj,Aryadit</my-custom>
+    <custom>Vijender,Ravi,Abhiraj,Aryadit</custom>
+</div>

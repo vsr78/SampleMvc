@@ -1,0 +1,41 @@
+﻿@model ProductViewModel
+@{
+	ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<div class="row">
+	<div class="col-lg-6">
+		<form asp-action="save" asp-controller="product" method="post">
+			<div class="mb-3">
+				<label asp-for="ProductId"></label>
+				<input type="text" asp-for="ProductId" class="form-control" />
+				<span asp-validation-for="ProductId" class="text-danger" ></span>
+			</div>
+			<div class="mb-3">
+				<label asp-for="ProductCode"></label>
+				<input type="text" asp-for="ProductCode" class="form-control" />
+				<span asp-validation-for="ProductCode" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label asp-for="ProductName"></label>
+				<input type="text" asp-for="ProductName" class="form-control" />
+				<span asp-validation-for="ProductName" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label asp-for="ProductDescription"></label>
+				<input type="text" asp-for="ProductDescription" class="form-control" />
+				<span asp-validation-for="ProductDescription" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label asp-for="Price"></label>
+				<input type="text" asp-for="Price" class="form-control" />
+				<span asp-validation-for="Price" class="text-danger"></span>
+			</div>
+			<div asp-validation-summary="All" class="text-danger" ></div>
+			<input type="submit" class="btn btn-primary" value="Save" />
+		</form>
+	</div>
+
+</div>
+
