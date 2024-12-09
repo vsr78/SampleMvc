@@ -1,0 +1,84 @@
+﻿@model ProductViewModel
+@{
+	ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+@*<form action="Save" method="post">
+    <label>Product Id:</label>
+    <input type="text" name="ProductId"/>
+    <br/>
+    <label>Product Code:</label>
+    <input type="text" name="ProductCode" />
+    <br />
+    <label>Product Name:</label>
+    <input type="text" name="ProductName" />
+    <br />
+    <label>Product Description:</label>
+    <input type="text" name="ProductDescription" />
+    <br />
+    <label>Product Price:</label>
+    <input type="text" name="Price" />
+    <br />
+    <input type="Submit" value="Submit"/>
+</form>*@
+
+@*using (Html.BeginForm("Save","product",FormMethod.Post))
+{ 
+    @Html.Label("ProductId");
+    @Html.TextBox("ProductId");
+    <br/>
+    @Html.Label("ProductName");
+    @Html.TextBox("ProductName");
+    <br/>
+    @Html.Label("ProductCode");
+    @Html.TextBox("ProductCode");
+    <br/>
+    @Html.Label("ProductDescription");
+    @Html.TextBox("ProductDescription")
+    ;
+    <br/>
+    @Html.Label("Price")
+    ;
+    @Html.TextBox("Price")
+    ;
+    <br />
+   <input type="Submit" value="Save"/>
+
+}*@
+
+<div class="row">
+	<div class="col-lg-6 col-sm-9">
+		@using (Html.BeginForm("Save", "product", FormMethod.Post))
+		{
+			@* <div class="mb-3">
+                @Html.LabelFor(x => x.ProductId)
+                @Html.TextBoxFor(x => x.ProductId,"", new {@class= "form-control"})
+            </div>
+            <div class="mb-3">
+                @Html.LabelFor(x => x.ProductCode)
+                @Html.TextBoxFor(x => x.ProductCode, "", new { @class = "form-control" })
+            </div>
+            <div class="mb-3">
+            @Html.LabelFor(x => x.ProductName)
+                @Html.TextBoxFor(x => x.ProductName, "", new { @class = "form-control" })
+            </div>
+            <div class="mb-3">
+                @Html.LabelFor(x => x.ProductDescription)
+
+                @Html.TextBoxFor(x => x.ProductDescription, "", new { @class = "form-control" })
+           </div>
+            <div class="mb-3">
+            @Html.LabelFor(x => x.Price)
+                @Html.TextBoxFor(x => x.Price, "", new { @class = "form-control" })
+           </div>
+            *@
+			@Html.EditorForModel()
+			<input type="Submit" value="Save" class="btn btn-primary" />
+		}
+	</div>
+	<div class="col-lg-6" style="height:300px;background-color:red;"></div>
+</div>
+
+

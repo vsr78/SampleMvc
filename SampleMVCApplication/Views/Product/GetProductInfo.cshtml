@@ -1,0 +1,24 @@
+﻿@model ProductViewModel;
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Product Info</h1>
+@{
+    // var productViewModel = ViewData["Product"] as ProductViewModel;
+  //  var productViewModel = ViewBag.Product;
+}
+
+@* <p>Product Id: @productViewModel.ProductId </p>
+<p>Product Name: @productViewModel.ProductName </p>
+<p>Product Code: @productViewModel.ProductCode </p>
+<p>Product Description: @productViewModel.ProductDescription </p>
+<p>Product Price: @productViewModel.Price </p> *@
+
+<p>Product Id: @Model.ProductId </p>
+<p>Product Name: @Model.ProductName </p>
+<p>Product Code: @Model.ProductCode </p>
+<p>Product Description: @Model.ProductDescription </p>
+<p>Product Price: @Model.Price </p>

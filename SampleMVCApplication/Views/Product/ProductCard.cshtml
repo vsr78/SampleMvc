@@ -1,0 +1,16 @@
+﻿@model IEnumerable<ProductViewModel>
+@{
+    ViewData["Title"] = "ProductList";
+}
+
+<h1>ProductList</h1>
+<a class="btn btn-dark" asp-action="Add" asp-controller="Product">Add Product</a>
+<div class="row">
+    @foreach (var product in Model)
+    { 
+        <div class="col-lg-4">
+            <partial name="_ProductList" model="product" />
+        </div>
+    }
+
+</div>
